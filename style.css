@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--Grey-900);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.card {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: var(--Grey-800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    scale: .59;
+}
+
+#link {
+    text-decoration: none;
+    color: white;
+    background-color: var(--Grey-700);
+    border-radius: 8px;
+    display: block;
+    margin: 0.75rem;
+    text-align: center;
+    padding: 1.25rem;
+    width: 18rem;
+    height: fit-content;
+    line-height: .075;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+#link:hover {
+    color: var(--Grey-700);
+    background-color: var(--Green);
+}
+
+.card p:first-of-type {
+    color: var(--White);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card p:nth-of-type(2) {
+    color: var(--Green);
+    line-height: .075;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 1rem 0 2rem 0
+}
+
+.card p:nth-of-type(3) {
+    color: var(--White);
+    line-height: .075;
+    font-size: 0.85rem;
+    margin: .75rem 0 1rem 0
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 765px;
+    }
+}
